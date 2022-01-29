@@ -1,0 +1,61 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nav-1 {
+        display: flex;
+        gap: 20px;
+        font-weight: 600;
+        font-size: 18px;
+
+        a {
+            text-decoration: none;
+            color: $secondaryColor;
+            padding: 10px;
+            transition: 0.5s;
+
+            &:hover {
+                color: $primaryColor;
+            }
+
+
+        }
+    }
+
+
+
+    .nav-2 {
+        display: flex;
+        gap: 40px;
+        font-weight: 600;
+        font-size: 18px;
+
+
+
+        a {
+            text-decoration: none;
+            color: $primaryColor;
+            padding: 10px;
+            transition: 0.5s;
+
+            &:hover {
+                color: $secondaryColor;
+                background-color: $primaryColor;
+                transform: scale(1.3);
+
+            }
+        }
+    }
+}
+
+.activ {
+    color: $secondaryColor;
+    background-color: $primaryColor;
+}   

@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
-@import './blocks/section-1';
-@import './blocks/section-2';
-@import './blocks/section-3';
-@import './blocks/section-4';
-@import './blocks/section-5';
-@import './blocks/footer';
+@import './utils/variables';
+@import './blocks/header';
+@import './blocks/maxsulotlar';
+
 
 * {
     margin: 0;
@@ -14,4 +12,32 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px);
+
+    section {
+        width: 75%;
+        height: 100%;
+        background-color: rgb(38, 38, 177);
+    }
+
+    aside {
+        width: 25%;
+        height: 100%;
+        background-color: darkcyan;
+    }
+}
+
+.section-1 {
+    padding: 30px 80px;
 }
