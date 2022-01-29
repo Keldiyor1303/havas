@@ -28,16 +28,20 @@ main {
     section {
         width: 75%;
         height: 100%;
-        background-color: rgb(38, 38, 177);
     }
 
     aside {
         width: 25%;
         height: 100%;
-        background-color: darkcyan;
+        background-color: $secondaryColor;
+        
     }
 }
 
 .section-1 {
     padding: 30px 80px;
+    background: $primaryColor;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(10px);
 }

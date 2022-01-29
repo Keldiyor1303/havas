@@ -77,11 +77,20 @@ header .nav-2 a:hover {
 }
 
 .buttons button {
-  width: 170px;
+  width: 200px;
   height: 50px;
   color: #E96023;
   font-size: 18px;
   font-weight: 600;
+  background-color: white;
+  border: 1px solid #E96023;
+  border-radius: 30px;
+}
+
+.buttons button:hover {
+  background-color: #FADF00;
+  color: white;
+  border: 1px solid transparent;
 }
 
 * {
@@ -112,16 +121,20 @@ main {
 main section {
   width: 75%;
   height: 100%;
-  background-color: #2626b1;
 }
 
 main aside {
   width: 25%;
   height: 100%;
-  background-color: darkcyan;
+  background-color: #FADF00;
 }
 
 .section-1 {
   padding: 30px 80px;
+  background: #30922F;
+  background-position: center;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 /*# sourceMappingURL=main.css.map */
