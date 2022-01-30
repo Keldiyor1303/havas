@@ -15,7 +15,7 @@ aside {
         height: 100%;
         overflow-y: auto;
         display: flex;
-        gap: 20px;
+        gap: 10px;
         flex-direction: column;
 
         &::-webkit-scrollbar {
@@ -37,14 +37,14 @@ aside {
             font-size: 18px;
             font-weight: 600;
             color: $primaryColor;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .info-2 p {
             font-size: 18px;
             font-weight: 600;
             color: $color;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         button {
@@ -80,4 +80,11 @@ aside {
             }
         }
     }
+}
+
+#umumiy {
+        margin-top: 10px;
+        font-size: 28px;
+        font-weight: 600;
+        color: white;
 }

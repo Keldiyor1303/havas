@@ -75,6 +75,10 @@ function Ichimliklar() {
 
 }
 
+// UMUMIY SUMMA
+const umumiy = document.querySelector("#umumiy")
+let umumiySumma = 0
+
 
 // SAVATGA QO`SHISH
 function savatgaQosh() {
@@ -130,6 +134,8 @@ function savatgachiqar(savat) {
 
     chiqarish.innerHTML = ""
 
+    umumiySumma = 0
+
     savat.forEach((element) => {
         const div = document.createElement("div")
 
@@ -144,10 +150,15 @@ function savatgachiqar(savat) {
             <button data-ochirish-id = ${element.id} id="ochirish" >O\`chirish</button>
     </div>        
         `
+        umumiySumma += element.soni * element.narx
+
 
         chiqarish.appendChild(div)
+        ochirish()
+
 
     })
+    umumiy.innerHTML = `Umumuy summa: ${"<br>"} ${umumiySumma} so\`m`
 }
 
 
@@ -158,7 +169,6 @@ function ochirish() {
 
         ochirishbtn.addEventListener("click", function () {
             const { ochirishId } = ochirishbtn.dataset
-            console.log(1)
 
             savat = savat.filter((element) => element.id != ochirishId)
             savatgachiqar(savat)
@@ -168,4 +178,5 @@ function ochirish() {
 
 }
 
-ochirish()
+
+
