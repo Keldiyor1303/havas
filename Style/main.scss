@@ -28,6 +28,10 @@ main {
     section {
         width: 75%;
         height: 100%;
+        padding: 30px 60px;
+        background: $primaryColor;
+        display: flex;
+        flex-direction: column;
     }
 
     aside {
@@ -36,12 +40,4 @@ main {
         background-color: $secondaryColor;
         
     }
-}
-
-.section-1 {
-    padding: 30px 80px;
-    background: $primaryColor;
-    background-position: center;
-    background-size: cover;
-    backdrop-filter: blur(10px);
 }

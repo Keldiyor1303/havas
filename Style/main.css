@@ -9,7 +9,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 80px;
+  padding: 0 60px;
 }
 
 header img {
@@ -35,7 +35,7 @@ header .nav-1 a {
 }
 
 header .nav-1 a:hover {
-  color: #30922F;
+  color: #E96023;
 }
 
 header .nav-2 {
@@ -74,10 +74,12 @@ header .nav-2 a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+  height: 50px;
 }
 
 .buttons button {
-  width: 200px;
+  width: 190px;
   height: 50px;
   color: #E96023;
   font-size: 18px;
@@ -88,6 +90,95 @@ header .nav-2 a:hover {
 }
 
 .buttons button:hover {
+  background-color: #FADF00;
+  color: white;
+  border: 1px solid transparent;
+}
+
+.maxsulotlar {
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 100%;
+  gap: 20px;
+  overflow-y: scroll;
+}
+
+.maxsulotlar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.maxsulotlar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+.maxsulotlar::-webkit-scrollbar-thumb {
+  background-color: #FADF00;
+  border-radius: 15px;
+}
+
+.maxsulotlar > div {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.maxsulotlar > div .img-div {
+  width: 300px;
+  margin: 20px auto;
+}
+
+.maxsulotlar > div .img-div img {
+  width: 300px;
+  height: 250px;
+}
+
+.maxsulotlar > div .info-div {
+  padding: 0 30px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.maxsulotlar > div .info-div h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #30922F;
+}
+
+.maxsulotlar > div .info-div p {
+  font-size: 30px;
+  font-weight: 600;
+  color: #FADF00;
+  margin-top: 20px;
+}
+
+.maxsulotlar > div .info-div button {
+  width: 190px;
+  height: 50px;
+  color: #E96023;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  border: 1px solid #E96023;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.maxsulotlar > div .info-div button:hover {
   background-color: #FADF00;
   color: white;
   border: 1px solid transparent;
@@ -121,20 +212,20 @@ main {
 main section {
   width: 75%;
   height: 100%;
+  padding: 30px 60px;
+  background: #30922F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main aside {
   width: 25%;
   height: 100%;
   background-color: #FADF00;
-}
-
-.section-1 {
-  padding: 30px 80px;
-  background: #30922F;
-  background-position: center;
-  background-size: cover;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 /*# sourceMappingURL=main.css.map */
