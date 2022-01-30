@@ -12,7 +12,7 @@ function chiqar(maxsulot) {
         const div = document.createElement("div")
         div.innerHTML = `
         <div class="img-div">
-        <img src="./Assets/images/olma.jpg" alt="">
+        <img src= ${element.rasmi}>
         </div>
         
         <div class="info-div">
@@ -36,7 +36,6 @@ const IchimliklarBtn = document.querySelector("#Ichimliklar")
 
 let local = JSON.parse(window.localStorage.getItem("buys"))
 let savat = local ? local : []
-savatgachiqar(savat)
 Barchasi()
 savatgaQosh()
 chiqar(maxsulotlar)
