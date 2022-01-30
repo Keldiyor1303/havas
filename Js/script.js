@@ -11,16 +11,16 @@ function chiqar(maxsulot) {
     maxsulot.forEach((element) => {
         const div = document.createElement("div")
         div.innerHTML = `
-                <div class="img-div">
-                    <img src="./Assets/images/olma.jpg" alt="">
-                </div>
-
-                <div class="info-div">
-                    <h2>${element.nom}</h2>
-                    <p>${element.narx} so\`m </p>
-                    <button data-savat-id="${element.id}" id="savat">Savatga qo\`shish</button>
-                </div>
-            `
+        <div class="img-div">
+        <img src="./Assets/images/olma.jpg" alt="">
+        </div>
+        
+        <div class="info-div">
+        <h2>${element.nom}</h2>
+        <p>${element.narx} so\`m </p>
+        <button data-savat-id="${element.id}" id="savat">Savatga qo\`shish</button>
+        </div>
+        `
 
         section.appendChild(div)
     })
@@ -34,6 +34,16 @@ const MevalarBtn = document.querySelector("#Mevalar")
 const ParrandaBtn = document.querySelector("#Parranda")
 const IchimliklarBtn = document.querySelector("#Ichimliklar")
 
+let local = JSON.parse(window.localStorage.getItem("buys"))
+let savat = local ? local : []
+savatgachiqar(savat)
+Barchasi()
+savatgaQosh()
+chiqar(maxsulotlar)
+
+
+
+
 
 function Barchasi() {
     chiqar(maxsulotlar)
@@ -42,6 +52,7 @@ function Barchasi() {
 }
 
 Barchasi()
+
 
 function Sabzavotlar() {
     const maxsulot = maxsulotlar.filter((element) => element.tur == "Sabzovot")
@@ -90,11 +101,11 @@ function savatgaQosh() {
             const { savatId } = savat.dataset
 
             savatgajonat(savatId)
+
         })
     }
 }
 
-let savat = [];
 
 let borYokiYoq = 0
 
@@ -122,7 +133,9 @@ function savatgajonat(savatId) {
                 })
             }
 
+            localStorage.setItem("buys", JSON.stringify(savat))
             savatgachiqar(savat)
+
         }
     })
 
@@ -156,7 +169,6 @@ function savatgachiqar(savat) {
         chiqarish.appendChild(div)
         ochirish()
 
-
     })
     umumiy.innerHTML = `Umumuy summa: ${"<br>"} ${umumiySumma} so\`m`
 }
@@ -171,12 +183,23 @@ function ochirish() {
             const { ochirishId } = ochirishbtn.dataset
 
             savat = savat.filter((element) => element.id != ochirishId)
+
+            localStorage.setItem("buys", JSON.stringify(savat))
             savatgachiqar(savat)
+
+
         })
 
     })
-
 }
 
+
+const buy = document.querySelector("#buy")
+
+buy.addEventListener("click", function () {
+    savat = []
+    localStorage.setItem("buys", JSON.stringify(savat))
+    savatgachiqar(savat)
+})
 
 
