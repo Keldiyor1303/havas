@@ -17,12 +17,12 @@ header {
 
         a {
             text-decoration: none;
-            color: $secondaryColor;
+            color: $color;
             padding: 10px;
             transition: 0.5s;
 
             &:hover {
-                color: $color;
+                color: $secondaryColor;
             }
         }
     }
