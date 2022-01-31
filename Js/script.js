@@ -191,13 +191,29 @@ function ochirish() {
     })
 }
 
+let localXarid = JSON.parse(window.localStorage.getItem("xarid"))
+let xaridlar = localXarid ? local : []
+
 
 const buy = document.querySelector("#buy")
 
 buy.addEventListener("click", function () {
+
+    xaridlar.push(savat)
+    localStorage.setItem("xarid", JSON.stringify(xaridlar))
+
     savat = []
     localStorage.setItem("buys", JSON.stringify(savat))
     savatgachiqar(savat)
 })
 
 
+const article = document.querySelector("article")
+
+function xaridHidden() {
+    article.style = "top: 100vh"
+}
+
+function xaridAuto() {
+    article.style = "top: 100px"
+}
