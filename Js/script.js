@@ -191,16 +191,16 @@ function ochirish() {
     })
 }
 
-let localXarid = JSON.parse(window.localStorage.getItem("xarid"))
-let xaridlar = localXarid ? local : []
+// let localXarid = JSON.parse(localStorage.getItem("xarid"))
+// let xaridlar = localXarid ? local : []
 
 
 const buy = document.querySelector("#buy")
 
 buy.addEventListener("click", function () {
 
-    xaridlar.push(savat)
-    localStorage.setItem("xarid", JSON.stringify(xaridlar))
+    // xaridlar.push(savat)
+    // localStorage.setItem("xarid", JSON.stringify(xaridlar))
 
     savat = []
     localStorage.setItem("buys", JSON.stringify(savat))

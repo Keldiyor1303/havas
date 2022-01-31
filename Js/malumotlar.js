@@ -130,7 +130,7 @@ const maxsulotlar = [
         tur: "Ichimlik",
         narx: "10000",
         nom: "Cola",
-        rasmi: "./Assets/images/cola.jpeg",
+        rasmi: "./Assets/images/cola.jpg",
     },
     {
         id: 20,
@@ -144,7 +144,7 @@ const maxsulotlar = [
         tur: "Ichimlik",
         narx: "10000",
         nom: "Pepsi",
-        rasmi: "./Assets/images/pepsi.jpg",
+        rasmi: "./Assets/images/pepsi.jpeg",
     },
     {
         id: 22,

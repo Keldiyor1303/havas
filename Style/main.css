@@ -341,12 +341,13 @@ article::-webkit-scrollbar-thumb {
   border-radius: 15px;
 }
 
-article table {
+article .table-div table {
   border: 3px solid #30922F !important;
   border-collapse: collapse;
+  overflow: scroll;
 }
 
-article table thead {
+article .table-div table thead {
   position: -webkit-sticky;
   position: sticky;
   top: -5px;
