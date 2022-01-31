@@ -1,3 +1,6 @@
+let local = JSON.parse(window.localStorage.getItem("buys"))
+let savat = local ? local : []
+
 const section = document.querySelector(".maxsulotlar")
 
 function chiqar(maxsulot) {
@@ -11,15 +14,15 @@ function chiqar(maxsulot) {
     maxsulot.forEach((element) => {
         const div = document.createElement("div")
         div.innerHTML = `
-        <div class="img-div">
-        <img src= ${element.rasmi}>
-        </div>
-        
-        <div class="info-div">
-        <h2>${element.nom}</h2>
-        <p>${element.narx} so\`m </p>
-        <button data-savat-id="${element.id}" id="savat">Savatga qo\`shish</button>
-        </div>
+            <div class="img-div">
+            <img src= ${element.rasmi}>
+            </div>
+            
+            <div class="info-div">
+            <h2>${element.nom}</h2>
+            <p>${element.narx} so\`m </p>
+            <button data-savat-id="${element.id}" id="savat">Savatga qo\`shish</button>
+            </div>
         `
 
         section.appendChild(div)
@@ -34,11 +37,6 @@ const MevalarBtn = document.querySelector("#Mevalar")
 const ParrandaBtn = document.querySelector("#Parranda")
 const IchimliklarBtn = document.querySelector("#Ichimliklar")
 
-let local = JSON.parse(window.localStorage.getItem("buys"))
-let savat = local ? local : []
-Barchasi()
-savatgaQosh()
-chiqar(maxsulotlar)
 
 
 
@@ -172,6 +170,7 @@ function savatgachiqar(savat) {
     umumiy.innerHTML = `Umumuy summa: ${"<br>"} ${umumiySumma} so\`m`
 }
 
+savatgachiqar(savat)
 
 function ochirish() {
     const ochirishbtns = document.querySelectorAll("#ochirish")
